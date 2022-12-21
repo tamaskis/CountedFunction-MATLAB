@@ -19,7 +19,9 @@ Class to define functions in a way that we can track the number of function eval
  - For complicated functions that have a long evaluation time to begin with, this performance hit is negligible.
 
 
-## Examples
+## Basic Example
+
+See more examples in `Examples.mlx`.
 
 ```matlab
 # define the function
