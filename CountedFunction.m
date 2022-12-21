@@ -47,8 +47,8 @@ classdef CountedFunction < handle
             obj.count = 0;
         end
         
-        function f_eval = eval(obj,x)
-            % CountedFunction.eval(x)
+        function f_eval = eval(obj,varargin)
+            % CountedFunction.eval(varargin)
             %
             % Evaluates the function, incrementing the count of function
             % calls.
@@ -60,7 +60,7 @@ classdef CountedFunction < handle
             %   x       - (any) input argument
             %
             %--------------------------------------------------------------
-            f_eval = obj.f(x);
+            f_eval = obj.f(varargin{:});
             obj.count = obj.count+1;
         end
         
@@ -81,8 +81,7 @@ classdef CountedFunction < handle
             % ------
             % INPUT:
             % ------
-            %   f       - (1×1 function_handle) original single-input 
-            %             function
+            %   f       - (1×1 function_handle) original function
             %
             % -------
             % OUTPUT:
@@ -93,7 +92,7 @@ classdef CountedFunction < handle
             %
             %--------------------------------------------------------------
             counted_function = CountedFunction(f);
-            fc = @(x) counted_function.eval(x);
+            fc = @(varargin) counted_function.eval(varargin{:});
             count = @counted_function.count;
         end
         
