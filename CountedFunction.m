@@ -72,8 +72,8 @@ classdef CountedFunction < handle
     
     methods(Static)
         
-        function [f,count] = count_function_calls(f)
-            % f = CountedFunction.count_function_calls(f)
+        function [fc,count] = count_function_calls(f)
+            % [fc,count] = CountedFunction.count_function_calls(f)
             %
             % Returns a function handle that evaluates a CountedFunction.
             %--------------------------------------------------------------
@@ -87,12 +87,13 @@ classdef CountedFunction < handle
             % -------
             % OUTPUT:
             % -------
-            %   f       - (1×1 function_handle) same function that now 
-            %             calls a CountedFunction internally
+            %   fc      - (1×1 function_handle) same function that now 
+            %             calls a CountedFunction internally so that we can
+            %             track the number of times it's evaluated
             %
             %--------------------------------------------------------------
             counted_function = CountedFunction(f);
-            f = @(x) counted_function.eval(x);
+            fc = @(x) counted_function.eval(x);
             count = @counted_function.count;
         end
         
