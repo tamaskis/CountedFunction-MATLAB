@@ -16,7 +16,7 @@ classdef CountedFunction < handle
     % -----------
     
     properties
-        f       % (1×1 function_handle) function with one input
+        f       % (1×1 function_handle) function handle
         count   % (1×1 double) number of function calls
     end
     
@@ -57,7 +57,7 @@ classdef CountedFunction < handle
             % ------
             % INPUT:
             % ------
-            %   x       - (any) input argument
+            %   varargin    - (any) input argument(s)
             %
             %--------------------------------------------------------------
             f_eval = obj.f(varargin{:});
