@@ -42,3 +42,20 @@ ans =
 
         2000
 ```
+
+
+```matlab
+# evaluates the function another 1000 times
+for i = 1:1000;
+    f(0);
+end
+
+# prints the number of function evaluations again
+count()
+```
+
+```matlab
+ans =
+
+        4000
+```
