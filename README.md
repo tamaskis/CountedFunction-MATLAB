@@ -3,7 +3,7 @@
 Class to define functions in a way that we can track the number of function evaluations.
 
 
-## Syntax
+## Usage
 
 `[fc,count] = CountedFunction.count_function_calls(f)`
 
