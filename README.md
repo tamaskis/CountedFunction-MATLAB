@@ -24,18 +24,18 @@ Class to define functions in a way that we can track the number of function eval
 See more examples in `Examples.mlx`.
 
 ```matlab
-# define the function
+% define the function
 f = @(x) x^2;
 
-# new function handle that counts the number of function evaluations
-[f,count] = CountedFunction.count_function_calls(f)
+% new function handle that counts the number of function evaluations
+[f,count] = CountedFunction.count_function_calls(f);
 
-# evaluates the function 1000 times
-for i = 1:1000;
+% evaluates the function 1000 times
+for i = 1:1000
     f(0);
 end
 
-# prints the number of function evaluations
+% prints the number of function evaluations
 count()
 ```
 
@@ -47,12 +47,12 @@ ans =
 
 
 ```matlab
-# evaluates the function another 1000 times
-for i = 1:1000;
+% evaluates the function another 1000 times
+for i = 1:1000
     f(0);
 end
 
-# prints the number of function evaluations again
+% prints the number of function evaluations again
 count()
 ```
 
