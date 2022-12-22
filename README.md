@@ -1,6 +1,6 @@
 # `CountedFunction`
 
-Class to define functions in a way that we can track the number of function evaluations.
+Class to define functions in a way that facilitates counting the number of function evaluations.
 
 
 ## Usage
