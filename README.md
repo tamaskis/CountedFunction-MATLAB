@@ -1,4 +1,4 @@
-# `CountedFunction`
+# `CountedFunction` [![View Counted Function (CountedFunction) on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/122422-counted-function-countedfunction)
 
 Class to define functions in a way that facilitates counting the number of function calls/evaluations.
 
